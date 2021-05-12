@@ -8,6 +8,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Nanum Gothic', sans-serif;
 }
 a{
@@ -16,6 +17,25 @@ a{
 li{
   list-style: none;
 }
+/* @media screen and (max-width: 1400px) {
+  section.business_outsourcing .container{
+    width: 100%;
+  }
+  section.business_outsourcing .container .card{
+    margin: 50px 10px;
+  }
+} */
+/* @media screen and (max-width: 1000px) {
+  section.business_outsourcing .container{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  section.business_outsourcing .container .card{
+    margin: 50px 10px;
+  }
+} */
 .navbar{
   display: block;
 }
@@ -144,96 +164,61 @@ li{
 .business_outsourcing .comment{
   margin-bottom: 30px;
 }
-.business_outsourcing .button_event,
-.business_outsourcing .button_event > ul{
+.business_outsourcing .container{
   width: 100%;
-}
-.business_outsourcing .button_event > ul{
   display: flex;
-  justify-content:space-between;
-  height: 300px;
-}
-.business_outsourcing .button_event > ul > li{
-  padding: 20px 0;
-  font-size: 30px;
-  display: flex;
-}
-.business_outsourcing .button_event > ul > li > a{
-  padding: 20px 20px;
-}
-.business_outsourcing .button_event > ul > li a .fa-circle,
-.business_outsourcing .button_event > ul > li a .fa-inverse,
-.business_outsourcing .button_event > ul > li a .fa-circle-notch{
-  color: #FFFFFF;
-}
-.business_outsourcing .button_event > ul > li:nth-child(1),
-.business_outsourcing .button_event > ul > li:nth-child(5){
-  flex-direction: column;
-  justify-content:flex-end;
-}
-.business_outsourcing .button_event > ul > li:nth-child(2),
-.business_outsourcing .button_event > ul > li:nth-child(4){
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
 }
-.business_outsourcing .button_event > ul > .selected-item{
-  display: none;
+.business_outsourcing .container .card{
+  position: relative;
+  width: 300px;
+  height: 215px;
+  background: #fff;
+  margin: 50px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.business_outsourcing .container .card img{
+  width: 260px;
+  height: 260px;
+}
+.container .card:hover
+{
+  height: 420px;
+}
+.container .card .img-box
+{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -100px;
+  left: 5px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card .img-box img{
+  height: 260px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+.container .card .card-content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  color: #111;
+  visibility: hidden;
   opacity: 0;
-  font-size: 0px;
+  transition: 0.3s ease-in-out;
 }
-.business_outsourcing .button_event > ul > .selected-item,
-.business_outsourcing .button_event > ul fa-circle-notch{
-  transition: all ease 0.5s;
-}
-.business_outsourcing .button_event > ul > .selected-item.appear{
-  display: block;
-  animation: font-size-up 1s ease,
-              fade-in 0.5s ease 0.7s; 
-  animation-fill-mode: forwards;
-}
-.business_outsourcing .button_event > ul > .selected-item.disappear{
-  animation: fade-out 1s ease,
-              font-size-down 1s ease 1s;
-  animation-fill-mode: forwards;
-}
-.rotate{
-  animation-iteration-count: 1;
-  animation: rotate 1.4s ease 0.7s; 
-}
-@keyframes font-size-up{
-  100%{
-    font-size: 30px;
-  }
-}
-@keyframes font-size-down{
-  100%{
-    font-size: 0px;
-  }
-}
-@keyframes fade-in{
-  100%{
-    opacity: 1;
-  }
-}
-@keyframes fade-out{
-  100%{
-    opacity: 0;
-  }
-}
-@keyframes rotate{
-  0%{
-    transform: rotate(360deg);
-  }
-}
-.business_outsourcing .button_event > ul > .item3{
-  align-items: center;
-}
-.business_outsourcing .button_event > ul > .item4{
-  flex-direction: column;
-  justify-content:flex-end;
-}
-.container{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.container .card:hover .card-content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
 }
