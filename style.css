@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+:root{
+  --bgColor: #263343;
+  --navTopBgColor: #f5f5f5;
+  --navTopFontColor: #757575;
+  --navMiddleHoverColor: #9e9e9e;
+  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+/* @media screen and (max-width: 1400px) {
+  section.business_outsourcing .container{
+    width: 100%;
+  }
+  section.business_outsourcing .container .card{
+    margin: 50px 10px;
+  }
+} */
+/* @media screen and (max-width: 1000px) {
+  section.business_outsourcing .container{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  section.business_outsourcing .container .card{
+    margin: 50px 10px;
+  }
+} */
+.navbar{
+  display: block;
+}
+/* goorm IDE 참고함 */
+.navbar .top{
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid #eeeeee;
+  background-color: var(--navTopBgColor);
+}
+.login{
+  padding: 4px 6px;
+  margin-right: 12px;
+  color: var(--navTopFontColor);
+}
+.language{
+  cursor: pointer;
+  color: var(--navTopFontColor);
+  border: 0;
+  border-bottom: 1px solid var(--navTopFontColor);
+  background-color: var(--navTopBgColor);
+}
+.language::after{
+  text-decoration: none;
+}
+.language option{
+  
+}
+.middle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  border-bottom: 1px solid #eeeeee;
+}
+.middle .corp_logo img{
+  height: 50px;
+}
+.navbar-menu{
+  display: flex;
+}
+.navbar-menu li{
+  padding: 8px 12px;
+}
+.navbar-menu li a{
+  color: var(--navTopFontColor);
+}
+.navbar-menu li a:hover{
+  color: var(--navMiddleHoverColor);
+}
+.company_main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.company_main h2{
+  padding: 50px 0;
+}
+.company_philosophy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: gainsboro;
+  color: #484848;
+}
+.company_philosophy h2{
+  padding: 30px 0;
+}
+.business_SI{
+  padding: 80px;
+  text-align: center;
+  line-height: 30px;
+}
+.technology{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.technology > div{
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid #9e9e9e;
+}
+.technology > div .header{
+  width: 100%;
+  border-bottom: 1px solid #9e9e9e;
+}
+.technology > div .header a{
+  color: #b39ddb;
+}
+.technology > div .header a i{
+  padding: 20px 0;
+}
+.technology > div .header h2{
+  padding: 20px 0;
+}
+.technology > div .explanation{
+  width: 100%;
+  padding-top: 15px;
+  text-align: left;
+}
+.business_consulting{
+  padding: 80px;
+  line-height: 30px;
+}
+.business_consulting .comment{
+  text-align: center;
+}
+.business_consulting .consulting_service{
+  text-align: center;
+  margin-top: 50px;
+}
+.business_outsourcing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  background-color: #8aacc8;
+}
+.business_outsourcing .comment{
+  margin-bottom: 30px;
+}
+.business_outsourcing .container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+.business_outsourcing .container .card{
+  position: relative;
+  width: 300px;
+  height: 215px;
+  background: #fff;
+  margin: 50px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.business_outsourcing .container .card img{
+  width: 260px;
+  height: 260px;
+}
+.container .card:hover
+{
+  height: 420px;
+}
+.container .card .img-box
+{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -100px;
+  left: 5px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card .img-box img{
+  height: 260px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+.container .card .card-content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover .card-content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
