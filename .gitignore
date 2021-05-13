@@ -209,3 +209,5 @@ dmypy.json
 fontawesome-pro-5.15.3-web/
 
 .vscode/
+
+node_modules/
