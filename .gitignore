@@ -194,15 +194,15 @@ dmypy.json
 # *.max
 
 # ### Text ###
-# *.doc
-# *.docx
-# *.log
-# *.msg
-# *.pages
-# *.rtf
-# *.txt
-# *.wpd
-# *.wps
+*.doc
+*.docx
+*.log
+*.msg
+*.pages
+*.rtf
+*.txt
+*.wpd
+*.wps
 
 ### Folder ###
 
