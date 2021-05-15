@@ -17,16 +17,19 @@ a{
 li{
   list-style: none;
 }
-/* @media screen and (max-width: 1400px) {
+@media screen and (max-width: 1280px) {
   section.business_outsourcing .container{
-    width: 100%;
+    min-height: 1200px !important;
   }
-  section.business_outsourcing .container .card{
-    margin: 50px 10px;
+  footer .contact{
+    font-size: 14px;
   }
-} */
-/* @media screen and (max-width: 1000px) {
-  section.business_outsourcing .container{
+  footer .infomation{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 830px) {
+  /* section.business_outsourcing .container{
     width: 550px;
     display: flex;
     justify-content: space-between;
@@ -34,8 +37,54 @@ li{
   }
   section.business_outsourcing .container .card{
     margin: 50px 10px;
+  } */
+  footer .contact{
+    flex-direction: column;
+    padding-right: 4em !important;
   }
-} */
+  footer .contact .about-us,
+  footer .contact .links,
+  footer .contact .contact-us{
+    width: 100% !important;
+  }
+  footer .contact .links,
+  footer .contact .contact-us{
+    margin-top: 2em;
+  }
+  footer .contact .links ul{
+    display: flex;
+  }
+  footer .contact .links ul li{
+    margin-right: 1.5em;
+  }
+  footer .contact .contact-us ul li{
+    margin-bottom: 0 !important;
+    margin-top: 1.7em;
+  }
+  footer .infomation{
+    padding: 1.5em 3em !important;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  footer .infomation ul{
+    width: 100% !important;
+    justify-content: center;
+  }
+  /* footer .infomation ul:before{
+    content: '';
+    position: absolute;
+    bottom: -0.6em;
+    width: 70%;
+    height: 1px;
+    background: #707070;
+  } */
+  footer .infomation ul li{
+    margin: 0 1.5em !important;
+  }
+  footer .infomation small{
+    margin-top: 1.5em;
+  }
+}
 .navbar{
   display: block;
 }
@@ -107,6 +156,7 @@ li{
 .company_philosophy h2{
   padding: 30px 0;
 }
+/* ****비지니스 SI**** */
 .business_SI{
   padding: 80px;
   text-align: center;
@@ -143,6 +193,8 @@ li{
   padding-top: 15px;
   text-align: left;
 }
+
+/* ****비지니스 컨설팅**** */
 .business_consulting{
   padding: 80px;
   line-height: 30px;
@@ -154,6 +206,8 @@ li{
   text-align: center;
   margin-top: 50px;
 }
+
+/* ****비지니스 아웃소싱**** */
 .business_outsourcing{
   display: flex;
   flex-direction: column;
@@ -167,14 +221,15 @@ li{
 .business_outsourcing .container{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   padding: 50px;
+  min-height: 550px;
 }
 .business_outsourcing .container .card{
   position: relative;
-  width: 300px;
+  width: 220px;
   height: 215px;
   background: #fff;
   margin: 50px 10px;
@@ -184,41 +239,106 @@ li{
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
 }
-.business_outsourcing .container .card img{
-  width: 260px;
-  height: 260px;
-}
-.container .card:hover
-{
-  height: 420px;
-}
-.container .card .img-box
-{
+.business_outsourcing .container .card .img-box{
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 200px;
+  height: 200px;
   top: -100px;
-  left: 5px;
+  right: 5px;
   z-index: 1;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
-.container .card .img-box img{
-  height: 260px;
+.business_outsourcing .container .card img{
+  width: 220px;
+  height: 200px;
   max-width: 100%;
   border-radius: 4px;
 }
-.container .card .card-content{
+.business_outsourcing .container .card:hover{
+  height: 340px;
+}
+.business_outsourcing .container .card .card-content{
   position: relative;
-  margin-top: -140px;
   padding: 10px 15px;
   color: #111;
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
-.container .card:hover .card-content{
+.business_outsourcing .container .card:hover .card-content{
   visibility: visible;
   opacity: 1;
-  margin-top: -40px;
+  margin-top: -80px;
   transition-delay: 0.3s;
+}
+footer{
+  width: 100%;
+  height: auto;
+}
+footer a{
+  color: #000000;
+}
+footer .contact{
+  background: #e3f2fd;
+  display: flex;
+  justify-content: space-around;
+  padding: 3em 6.5em;
+}
+footer .contact .cont{
+  margin-right: 2em;
+}
+footer .contact .about-us{
+  width: 40%;
+}
+footer .contact h2{
+  position:relative;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+footer .contact .links{
+  position: relative;
+  width: 10%;
+}
+footer .contact .links ul li a{
+  margin-bottom: 0.7em;
+  display: inline-block;
+}
+footer .contact .links ul li a:hover{
+  color: #616161;
+}
+footer .contact .contact-us{
+  width: calc(50%-2em);
+  margin-right: 0;
+}
+footer .contact .contact-us ul li{
+  margin-bottom: 1.3em;
+}
+footer .contact .contact-us ul li span{
+  padding: 0 0.3em;
+}
+/* footer .contact h2{
+  position: relative;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+} */
+/* footer .contact h2::before{
+  position: absolute;
+} */
+footer .infomation{
+  background: #bbdefb;
+  padding: 1.5em 6.5em;
+  display: flex;
+  justify-content: space-between;
+}
+footer .infomation ul{
+  position: relative;
+  display: flex;
+  font-size: 14px;
+}
+footer .infomation ul li{
+  margin: 0 1em;
+}
+footer .infomation ul li a:hover{
+  color: #616161;
 }
